@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#outer{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+input{
+    padding: 5px 8px;
+    border-radius: 3px;
+    outline: none;
+}
+button{
+    background-color: rgb(18, 156, 34);
+    color:white;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: 3px 5px;
+    font-size: 0.9rem; /* Decreased font size */
+}
+button:hover{
+    cursor:pointer;
+    background-color:rgb(54, 225, 54);
+    transition: all 0.3s ease-in-out;
+}
+.google-btn {
+    font-size: 0.9rem; /* Ensure Google button also has smaller font */
+}
+.remember-label {
+    font-size: 0.9rem;
+}
+.signup-text {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
