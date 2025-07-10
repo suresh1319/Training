@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;;
+            align-items: center;
+            background-image: linear-gradient(to right, rgb(143, 255, 191),rgb(255, 255, 255),rgb(143, 255, 191));
+            padding: 10px;
+        }
+        #ul{
+            display: flex;
+            gap: 10px;
+        }
+        #ul li a,#ul li{
+            text-decoration: none;
+            list-style-type: none;
+            color:black;
+        }
+        #ul li a:hover,#ul li:hover{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+            color: red;
+        }
+        
+        main{
+            height: calc(100vh - 99px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer{
+            height: 40px;
+            background-color: black;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h2>V.Suresh</h2>
+        <nav id="nav">
+            <ul id="ul">
+                <li><a href="website.html">Mobiles</a></li>
+                <li><a href="About.html">Laptops</a></li>
+                <li><a href="services.html">Groceries</a></li>
+                <li><a href="#">Men Wear</a></li>
+                <li><a href="#">Women Wear</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       <div>
+        <h2>Mobiles</h2>
+        <div>
+            <img src="./images/realme.jpg" alt="">
+        </div> 
+        <div>
+        </div>
+       </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 V.Suresh</p>
+    </footer>
+</body>
+</html>
