@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .block{
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            box-shadow: 10px black;
+        }
+        .label{
+            font-size: 1.5rem;
+            text-align: center;
+            color: black;
+        }
+        .fade-in{
+            animation: fadeIn 0.3s infinite ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            50% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+        .slide-in{
+            animation: slideIn 0.3s infinite;
+        }
+        @keyframes slideIn {
+            0% {transform: translateX(-100%);}
+            50% {transform: translateX(0);}
+            100%  {transform: translateX(-100%);}
+        }
+        .bounce{
+            animation: bounce 0.3s infinite;
+        }
+        @keyframes bounce {
+            0% {transform: translateY(0);}
+            50% {transform: translateY(-50px);}
+            100% {transform: translateY(0);}
+        }
+        .rotate{
+            animation: rotate 0.3s infinite;
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0deg);}
+            50% {transform: rotate(180deg);}
+            100% {transform: rotate(360deg);}
+        }
+        .scale-up{
+            animation: scaleUp 0.3s infinite;
+        }
+        @keyframes scaleUp {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.3);}
+            100% {transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+  
+    <div class = "block">
+        <div class="box fade-in">
+        </div>
+    </div>
+    <div class = "block">
+        <div class="box slide-in">
+            <div class = "label"></div>
+        </div>
+    </div>
+    <div class = "block">
+        <div class="box bounce">
+            <div class = "label"></div>
+        </div>
+    </div>
+    <div class = "block">
+        <div class="box rotate">
+            <div class = "label"></div>
+        </div>
+    </div>
+    <div class = "block">
+        <div class="box scale-up">
+            <div class = "label"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border-radius: 30%;
+            position: relative;
+            animation: example 4s infinite;
+        }
+        @keyframes example {
+          0% {transform: translateX(50px); background-color: blue;}
+          25% {transform: translateX(-50px); background-color: green;}
+          50% {transform: translateY(-50px); background-color: yellow;}
+          75% {transform: translateX(50px); background-color: orange;}
+          100% {transform: translateX(50px); background-color: pink;}
+        }
+         
+    </style>
+</head>
+<body>
+    <div id = "box">
+
+    </div>
+</body>
+</html>

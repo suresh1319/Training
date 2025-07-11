@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transitions</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction:row;
+      gap: 20px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      transition: all 0.5s ease-in;
+      cursor: pointer;
+      flex-wrap:wrap;
+    }
+
+    .box1:hover {
+      background-color: orange;
+    }
+
+    .box2:hover {
+      width: 300px;
+    }
+
+    .box3:hover {
+      height: 150px;
+    }
+
+    .box4:hover {
+      transform: scale(1.2);
+    }
+
+    .box5:hover {
+      opacity: 0.5;
+    }
+
+    .box6:hover {
+      border-radius: 50px;
+    }
+    h1{
+        text-align: center;
+    }
+    .box7:hover{
+       transform: rotate(360deg);
+    }
+    .box8:hover{
+        transform: translateX(50px);
+    }
+    
+  </style>
+</head>
+<body>
+    <h1>TYPES OF TRANSITIONS</h1>
+  <div class="container">
+    <div class="box box1">BackgroundColor</div>
+    <div class="box box2">Width</div>
+    <div class="box box3">Height</div>
+    <div class="box box4">Scale</div>
+    <div class="box box5">Opacity</div>
+    <div class="box box6">Border</div>
+<div class="box box7">Rotate</div>
+<div class="box box8">Move</div>
+  </div>
+</body>
+</html>

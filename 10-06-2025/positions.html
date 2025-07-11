@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fa-robot{
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            cursor: pointer;
+            color: white
+        }
+         #header{
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;;
+            align-items: center;
+            background-image: linear-gradient(to right, rgb(143, 255, 191),rgb(255, 255, 255),rgb(143, 255, 191));
+            padding: 10px;
+        }
+        main{
+            height: 100vh;
+            background-color: aquamarine;
+        }
+    h2{
+        position: sticky;
+        top: 0;
+    }
+
+        #ul{
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        #ul li a,#ul li{
+            text-decoration: none;
+            list-style-type: none;
+            color:white;
+        }
+        #ul li a:hover,#ul li:hover{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+            color: red;
+        }
+        section{
+            position: relative;
+            top: 0px;
+            width: 100%;
+            min-height: calc(100% - 40px);
+            background-color: green;
+        }
+         footer{
+            height: 40px;
+            background-color: black;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        @media screen and (orientation:portrait)  {
+            #ul{
+                background-color: green;
+                flex-direction:column;
+                position:absolute;
+                right: 10px ;
+                top:1px;
+                z-index: 1;
+                padding: 10px;
+                padding-left: 20px;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+            #ul li{
+                 list-style-type: disc;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body> <header id="header">
+        <h2>V.Suresh</h2>
+    </header>
+    <section>
+        <nav id="nav">
+            <ul id="ul">
+                <li><a href="website.html">Mobiles</a></li>
+                <li><a href="About.html">Laptops</a></li>
+                <li><a href="services.html">Groceries</a></li>
+                <li><a href="#">Men Wear</a></li>
+                <li><a href="#">Women Wear</a></li>
+            </ul>
+        </nav>
+    </section>
+    <main></main>
+    <a href="https://www.chatgpt.com" target="_blank" rel="noopener" title="Open ChatGPT website"><i class="fa-solid fa-robot" aria-hidden="true"></i><span class="sr-only">Open ChatGPT website</span></a>
+     <footer>
+        <p>&copy; 2023 V.Suresh</p>
+    </footer>
+</body>
+</html>
