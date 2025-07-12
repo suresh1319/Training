@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Challenge - Test Your Knowledge!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="back-to-welcome" class="btn btn-icon"><span class="back-arrow">←</span></button>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h1 class="app-title">🧠 Quiz Challenge</h1>
+                <div class="player-input">
+                    <input type="text" id="player-name" placeholder="Enter your name" maxlength="20">
+                    <select id="category" class="category-select" aria-label="Select quiz category">
+                        <option value="">All Categories</option>
+                        <option value="science">Science</option>
+                        <option value="geography">Geography</option>
+                        <option value="history">History</option>
+                        <option value="music">Music</option>
+                        <option value="film_and_tv">Film & TV</option>
+                        <option value="arts_and_literature">Arts & Literature</option>
+                        <option value="sport_and_leisure">Sport & Leisure</option>
+                        <option value="food_and_drink">Food & Drink</option>
+                        <option value="general_knowledge">General Knowledge</option>
+                        <option value="society_and_culture">Society & Culture</option>
+                    </select>
+                    <select id="difficulty" class="difficulty-select" aria-label="Select difficulty level">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <select id="num-questions" class="num-questions-select" aria-label="Select number of questions">
+                        <option value="5">5 Questions</option>
+                        <option value="10" selected>10 Questions</option>
+                        <option value="15">15 Questions</option>
+                    </select>
+                    <button id="start-quiz" class="btn btn-primary">Start Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <button id="show-leaderboard" class="btn btn-secondary">View Leaderboard</button>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <span class="question-counter">Question <span id="current-question">1</span> of <span id="total-questions">5</span></span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="timer-container">
+                    <div id="timer-circle" class="timer-circle">
+                        <span id="timer-text">10</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text" class="question-text"></h2>
+                <div id="options-container" class="options-container"></div>
+                <button id="next-question" class="btn btn-primary" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Results Modal -->
+        <div id="results-modal" class="modal">
+            <div class="modal-content">
+                <h2>Quiz Complete!</h2>
+                <div id="score-display" class="score-display">
+                    <div class="score-number"></div>
+                    <div class="score-stats">
+                        <div class="stat-item correct-answers">
+                            <span class="stat-icon">✓</span>
+                            <span class="stat-count"></span>
+                            <span class="stat-label">Correct</span>
+                        </div>
+                        <div class="stat-item incorrect-answers">
+                            <span class="stat-icon">✗</span>
+                            <span class="stat-count"></span>
+                            <span class="stat-label">Incorrect</span>
+                        </div>
+                    </div>
+                    <div class="star-rating"></div>
+                    <div class="score-message"></div>
+                </div>
+                <div class="review-heading">Answer Review</div>
+                <div id="answer-review" class="answer-review"></div>
+                <div class="modal-actions">
+                    <button id="play-again" class="btn btn-primary">Play Again</button>
+                    <button id="view-leaderboard" class="btn btn-secondary">Leaderboard</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Modal -->
+        <div id="leaderboard-modal" class="modal">
+            <div class="modal-content">
+                <h2>🏆 Leaderboard</h2>
+                <div id="leaderboard-list" class="leaderboard-list"></div>
+                <div class="modal-actions">
+                    <button id="close-leaderboard" class="btn btn-secondary">Close</button>
+                    <button id="clear-leaderboard" class="btn btn-danger">Clear Scores</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
