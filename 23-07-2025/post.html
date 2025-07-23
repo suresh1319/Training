@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .post {
+            height: 270px;
+            width: 250px;
+            padding: 1px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        #box1 {
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #profile {
+            border-radius: 50%;
+            margin-right: 2px;
+        }
+
+        #img-name {
+            display: flex;
+            align-items: center;
+        }
+
+        #name {
+            font-size: x-small;
+            font-weight: 300;
+        }
+
+        #song {
+            font-weight: 50;
+            font-size: xx-small;
+        }
+
+        #button {
+            display: flex;
+            align-items: center;
+        }
+
+        #button button {
+            border: none;
+            outline: none;
+            padding: 2px 3px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+
+        #image-container {
+            margin-top: 5px;
+        }
+
+        #image-container img {
+            width: 250px;
+        }
+
+        #box3 {
+            margin-top: 8px;
+        }
+
+        #lsc {
+            display: flex;
+            text-align: center;
+        }
+
+        p {
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 7px;
+
+        }
+
+        #box3 {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .color {
+            color: red;
+        }
+        #music{
+            z-index: 2;
+            position: absolute;
+            right: 150px;
+            bottom: 105px;
+            color: aliceblue;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="post">
+        <div id="box1">
+            <div id="img-name">
+                <img id="profile"
+                    src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0="
+                    height="30px" alt="profile">
+                <span>
+                    <h6 id="name">Suresh Veeraboina</h6>
+                    <h6 id="song">1 hour ago</h6>
+                </span>
+            </div>
+            <div id="button">
+                <button onclick="onfollowed()">Follow</button>
+                <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
+            </div>
+        </div>
+        <div id="box2">
+            <div id="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRADG2fTJ7s_srS9VP6zTDTWAE4vPDrjcSZOA&s"
+                alt="post-image">
+            </div>
+            <p id="music" onclick="onsoundclick()"><i class="fa-solid fa-volume-high"></i></p>
+        </div>
+        <div id="box3">
+            <div id="lsc">
+                <p id="like" onclick="onliked()">
+                    <i class="like fa-regular fa-heart"></i><span id="likecounter">0</span> 
+                </p>
+                <p><i class="fa-regular fa-comment"></i>50</p>
+                <p><i class="fa-regular fa-paper-plane"></i>20</p>
+            </div>
+            <div id="save">
+                <p><i class="fa-regular fa-bookmark"></i></p>
+            </div>
+        </div>
+    </div>  
+    <script>
+        function onliked() {
+            const like = document.getElementById("likecounter");
+            if (like.innerText == "0"){
+                like.innerText="1";
+            }
+            else{
+                like.innerText="0"
+            }
+            const heartIcon = document.querySelector("#like .like");
+            heartIcon.classList.toggle("fa-regular");
+            heartIcon.classList.toggle("fa-solid");
+        }
+        function onsoundclick(){
+            const music = document.getElementById("music")
+            if(music.innerHTML==='<i class="fa-solid fa-volume-high"></i>'){
+                music.innerHTML='<i class="fa-regular fa-volume-slash"></i>';
+            }
+            else{
+                music.innerHTML='<i class="fa-solid fa-volume-high"></i>';
+            }
+        }
+        function onfollowed(){
+            const button = document.querySelector('button');
+            if(button.innerText=="Follow"){
+                button.innerText="Following"
+            }
+            else{
+                button.innerText="Follow"
+            }
+        }
+    </script>
+</body>
+
+</html>

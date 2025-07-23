@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="validate()">
+       <label><input type="password" id="pass1" placeholder="enter Password" name = "pass"></label>
+       <label><input type="password" id = "pass2" placeholder="Renter Password" name = "pass"></label>
+       <button>Submit</button>
+       <script>
+       function validate(){
+         const pass1 = document.getElementById("pass1").value.toLowerCase();
+        const pass2 = document.getElementById("pass2").value.toLowerCase();
+        if (pass1!==pass2){
+            alert("Something Went Wrong")
+        }
+        else{
+            alert("Success");
+        }
+       }
+       </script>
+    </form>
+</body>
+</html>
